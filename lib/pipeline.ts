@@ -15,7 +15,8 @@ export default class PipelineConstruct extends Construct {
     .account(account)
     .region(region)
     .addOns(
-        new blueprints.ClusterAutoScalerAddOn
+        new blueprints.ClusterAutoScalerAddOn,
+        new blueprints.KubeviousAddOn
       )
     .teams(
         new TeamPlatform(account),
